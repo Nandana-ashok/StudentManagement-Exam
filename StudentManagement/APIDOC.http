@@ -1,0 +1,75 @@
+###
+GET http://127.0.0.1:8000/register/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username" : "ann",
+    "email" : "ann@gmail.com",
+    "password" : "ann@123"
+}
+
+
+###
+POST http://127.0.0.1:8000/login/
+Content-Type: application/json
+
+{
+    "username" : "ann",
+    "password" : "ann@123"
+}
+
+###
+POST http://127.0.0.1:8000/students/
+Content-Type: application/json
+Authorization: Token 220fe52ba2d1cd51d19b8e44cf4732a7190a8c44
+
+{
+    "name" : "Betsy",
+    "roll_number" : "2",
+    "course": "MEARN Stack",
+    "age" : "21",
+    "place":"Cochin"
+}
+
+
+###
+GET http://127.0.0.1:8000/students/ 
+Accept: application/json
+Authorization: Token 220fe52ba2d1cd51d19b8e44cf4732a7190a8c44
+
+
+
+###
+GET http://127.0.0.1:8000/students/4/
+Accept: application/json
+Authorization: Token 220fe52ba2d1cd51d19b8e44cf4732a7190a8c44
+
+
+###
+PUT http://127.0.0.1:8000/students/3/
+Content-Type: application/json
+Authorization: Token 220fe52ba2d1cd51d19b8e44cf4732a7190a8c44
+
+{
+    "name" : "Athira",
+    "roll_number" : "5",
+    "course": "Python Fullstack",
+    "age" : "25",
+    "place":"Trivandrum"
+}
+
+
+###
+DELETE http://127.0.0.1:8000/students/4/ 
+Authorization: Token 220fe52ba2d1cd51d19b8e44cf4732a7190a8c44
+
+
+###
+POST http://127.0.0.1:8000/logout/ 
+Content-Type: application/json
+Authorization: Token 220fe52ba2d1cd51d19b8e44cf4732a7190a8c44
+
