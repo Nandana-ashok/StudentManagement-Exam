@@ -25,6 +25,5 @@ urlpatterns = [
     path('students/',views.StudentCreateListView.as_view()),
     path('students/<int:st_id>/',views.StudentRetrieveUpdateDeleteView.as_view()),
     path('login/',obtain_auth_token),
-    path('logout/',views.LogOutView.as_view()),
-    path('user/<int:id>/',views.RegistrationView.as_view())
+    path('logout/',views.LogOutView.as_view())
     ]
